@@ -1,0 +1,282 @@
+profiler build: NO
+ndk-build params is :-j20
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/Application.mk:33: "APP_CFLAG111 : -O3 -Wall -pipe -ffast-math -fstrict-aliasing -Werror=strict-aliasing -Wno-psabi -Wa,--noexecstack -DANDROID -DNDEBUG"
+Android NDK: WARNING: APP_PLATFORM android-21 is higher than android:minSdkVersion 1 in /home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/AndroidManifest.xml. NDK binaries will *not* be comptible with devices older than android-21. See https://android.googlesource.com/platform/ndk/+/master/docs/user/common_problems.md for more information.    
+
+/home/denghg/Android/android-ndk-r15c/build/core/build-binary.mk:528: warning: overriding commands for target `/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/obj/local/arm64-v8a/objs/ijksdl/ijksdl_extra_log.o'
+/home/denghg/Android/android-ndk-r15c/build/core/build-binary.mk:528: warning: ignoring old commands for target `/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/obj/local/arm64-v8a/objs/ijksdl/ijksdl_extra_log.o'
+[arm64-v8a] Prebuilt       : libijkffmpeg.so <= /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/
+[arm64-v8a] Prebuilt       : libc++_shared.so <= <NDK>/sources/cxx-stl/llvm-libc++/libs/arm64-v8a/
+[arm64-v8a] Compile        : ijkj4a <= IjkMediaPlayer.c
+[arm64-v8a] Compile        : ijkplayer <= ff_cmdutils.c
+[arm64-v8a] Compile        : ijkplayer <= ff_ffplay.c
+[arm64-v8a] Compile        : ijkplayer <= ff_ffpipeline.c
+[arm64-v8a] Compile        : ijkplayer <= ff_ffpipenode.c
+[arm64-v8a] Compile        : ijkplayer <= ijkmeta.c
+[arm64-v8a] Compile        : ijkplayer <= ijkplayer.c
+[arm64-v8a] Compile        : ijkplayer <= ffpipeline_ffplay.c
+[arm64-v8a] Compile        : ijkplayer <= ffpipenode_ffplay_vdec.c
+[arm64-v8a] Compile        : ijkplayer <= ffmpeg_api_jni.c
+[arm64-v8a] Compile        : ijkplayer <= ijkplayer_android.c
+[arm64-v8a] Compile        : ijkplayer <= ijkplayer_jni.c
+[arm64-v8a] Compile        : ijkplayer <= ffpipeline_android.c
+[arm64-v8a] Compile        : ijkplayer <= ffpipenode_android_mediacodec_vdec.c
+[arm64-v8a] Compile        : ijkplayer <= allformats.c
+[arm64-v8a] Compile        : ijkplayer <= ijklivehook.c
+[arm64-v8a] Compile        : ijkplayer <= ijkmediadatasource.c
+[arm64-v8a] Compile        : ijkplayer <= ijkio.c
+[arm64-v8a] Compile        : ijkplayer <= ijkiomanager.c
+[arm64-v8a] Compile        : ijkplayer <= ijkiocache.c
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ijkavformat/allformats.c: In function 'ijkav_find_input_format':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ijkavformat/allformats.c:46:5: warning: 'av_iformat_next' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavformat/avformat.h:2089) [-Wdeprecated-declarations]
+     while ((fmt = av_iformat_next(fmt))) {
+     ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ijkavformat/allformats.c: In function 'ijkav_register_input_format':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ijkavformat/allformats.c:61:9: warning: 'av_register_input_format' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavformat/avformat.h:2055) [-Wdeprecated-declarations]
+         av_register_input_format(iformat);
+         ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ijkavformat/allformats.c: In function 'ijkav_register_all':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ijkavformat/allformats.c:74:5: warning: 'av_register_all' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavformat/avformat.h:2052) [-Wdeprecated-declarations]
+     av_register_all();
+     ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ijkavformat/ijklivehook.c: In function 'ijklivehook_read_header':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ijkavformat/ijklivehook.c:195:5: warning: 'filename' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavformat/avformat.h:1421) [-Wdeprecated-declarations]
+     av_strstart(avf->filename, "ijklivehook:", &inner_url);
+     ^
+[arm64-v8a] Compile        : ijkplayer <= ijkioffio.c
+[arm64-v8a] Compile        : ijkplayer <= ijkioandroidio.c
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c: In function 'convert_image':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:542:5: warning: 'avcodec_encode_video2' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:5409) [-Wdeprecated-declarations]
+     ret = avcodec_encode_video2(img_info->frame_img_codec_ctx, &avpkt, dst_frame, &got_packet);
+     ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c: In function 'decoder_decode_frame':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:610:33: warning: 'av_codec_get_pkt_timebase' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:3331) [-Wdeprecated-declarations]
+                                 frame->pts = av_rescale_q(frame->pts, av_codec_get_pkt_timebase(d->avctx), tb);
+                                 ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/android/pipeline/ffpipenode_android_mediacodec_vdec.c: In function 'feed_input_buffer2':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/android/pipeline/ffpipenode_android_mediacodec_vdec.c:509:9: warning: 'av_packet_split_side_data' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:4479) [-Wdeprecated-declarations]
+         av_packet_split_side_data(&pkt);
+         ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/android/pipeline/ffpipenode_android_mediacodec_vdec.c:550:17: warning: 'avcodec_decode_video2' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:4778) [-Wdeprecated-declarations]
+                 change_ret = avcodec_decode_video2(new_avctx, frame, &got_picture, avpkt);
+                 ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/android/pipeline/ffpipenode_android_mediacodec_vdec.c: In function 'feed_input_buffer':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/android/pipeline/ffpipenode_android_mediacodec_vdec.c:757:9: warning: 'av_packet_split_side_data' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:4479) [-Wdeprecated-declarations]
+         av_packet_split_side_data(&pkt);
+         ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/android/pipeline/ffpipenode_android_mediacodec_vdec.c:797:17: warning: 'avcodec_decode_video2' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:4778) [-Wdeprecated-declarations]
+                 change_ret = avcodec_decode_video2(new_avctx, frame, &got_picture, avpkt);
+                 ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/android/pipeline/ffpipenode_android_mediacodec_vdec.c: In function 'drain_output_buffer2':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/android/pipeline/ffpipenode_android_mediacodec_vdec.c:1502:9: warning: 'av_frame_get_pkt_pos' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavutil/frame.h:613) [-Wdeprecated-declarations]
+         ret = ffp_queue_picture(ffp, frame, pts, duration, av_frame_get_pkt_pos(frame), is->viddec.pkt_serial);
+         ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/android/pipeline/ffpipenode_android_mediacodec_vdec.c: In function 'func_run_sync':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/android/pipeline/ffpipenode_android_mediacodec_vdec.c:1644:13: warning: 'av_frame_get_pkt_pos' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavutil/frame.h:613) [-Wdeprecated-declarations]
+             ret = ffp_queue_picture(ffp, frame, pts, duration, av_frame_get_pkt_pos(frame), is->viddec.pkt_serial);
+             ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c: In function 'stream_component_open':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:2876:5: warning: 'av_codec_set_pkt_timebase' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:3333) [-Wdeprecated-declarations]
+     av_codec_set_pkt_timebase(avctx, ic->streams[stream_index]->time_base);
+     ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:2898:5: warning: 'av_codec_get_max_lowres' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:3577) [-Wdeprecated-declarations]
+     if(stream_lowres > av_codec_get_max_lowres(codec)){
+     ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:2900:17: warning: 'av_codec_get_max_lowres' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:3577) [-Wdeprecated-declarations]
+                 av_codec_get_max_lowres(codec));
+                 ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:2901:9: warning: 'av_codec_get_max_lowres' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:3577) [-Wdeprecated-declarations]
+         stream_lowres = av_codec_get_max_lowres(codec);
+         ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:2903:5: warning: 'av_codec_set_lowres' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:3347) [-Wdeprecated-declarations]
+     av_codec_set_lowres(avctx, stream_lowres);
+     ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c: In function 'is_realtime':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:3099:5: warning: 'filename' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavformat/avformat.h:1421) [-Wdeprecated-declarations]
+     if(s->pb && (   !strncmp(s->filename, "rtp:", 4)
+     ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:3100:18: warning: 'filename' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavformat/avformat.h:1421) [-Wdeprecated-declarations]
+                  || !strncmp(s->filename, "udp:", 4)
+                  ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c: In function 'read_thread':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:3431:24: warning: 'filename' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavformat/avformat.h:1421) [-Wdeprecated-declarations]
+                        "%s: error while seeking\n", is->ic->filename);
+                        ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c: In function 'ffp_global_init':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:3945:5: warning: 'avcodec_register_all' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:4109) [-Wdeprecated-declarations]
+     avcodec_register_all();
+     ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:3952:5: warning: 'av_register_all' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavformat/avformat.h:2052) [-Wdeprecated-declarations]
+     av_register_all();
+     ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:3958:5: warning: 'av_lockmgr_register' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:6104) [-Wdeprecated-declarations]
+     av_lockmgr_register(lockmgr);
+     ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c: In function 'ffp_global_uninit':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkplayer/ff_ffplay.c:3972:5: warning: 'av_lockmgr_register' is deprecated (declared at /home/denghg/workspace/befovy/ijkplayer/android/contrib/build/output-arm64/include/libavcodec/avcodec.h:6104) [-Wdeprecated-declarations]
+     av_lockmgr_register(NULL);
+     ^
+[arm64-v8a] Compile        : ijkplayer <= ijkioprotocol.c
+[arm64-v8a] Compile        : ijkplayer <= ijkioapplication.c
+[arm64-v8a] Compile        : ijkplayer <= ijkiourlhook.c
+[arm64-v8a] Compile        : ijkplayer <= ijkasync.c
+[arm64-v8a] Compile        : ijkplayer <= ijkurlhook.c
+[arm64-v8a] Compile        : ijkplayer <= ijklongurl.c
+[arm64-v8a] Compile        : ijkplayer <= ijksegment.c
+[arm64-v8a] Compile        : ijkplayer <= ijkdict.c
+[arm64-v8a] Compile        : ijkplayer <= ijkthreadpool.c
+[arm64-v8a] Compile        : ijkplayer <= ijkutils.c
+[arm64-v8a] Compile        : ijkplayer <= ijktree.c
+[arm64-v8a] Compile        : ijkplayer <= ijkfifo.c
+[arm64-v8a] Compile++      : ijkplayer <= ijkstl.cpp
+[arm64-v8a] Compile        : ijksdl <= ijksdl_log.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_extra_log.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_aout.c
+[arm64-v8a] Compile        : ijksdl <= renderer_amc.c
+cc1plus: warning: command line option '-std=c11' is valid for C/ObjC but not for C++
+[arm64-v8a] Compile        : ijksdl <= ijksdl_audio.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_egl.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_error.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_mutex.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_stdinc.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_thread.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_timer.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_vout.c
+[arm64-v8a] Compile        : ijksdl <= color.c
+[arm64-v8a] Compile        : ijksdl <= common.c
+[arm64-v8a] Compile        : ijksdl <= renderer_rgb.c
+[arm64-v8a] Compile        : ijksdl <= renderer.c
+[arm64-v8a] Compile        : ijksdl <= renderer_yuv420p.c
+[arm64-v8a] Compile        : ijksdl <= renderer_yuv444p10le.c
+[arm64-v8a] Compile        : ijksdl <= shader.c
+[arm64-v8a] Compile        : ijksdl <= rgb.fsh.c
+[arm64-v8a] Compile        : ijksdl <= yuv420p.fsh.c
+[arm64-v8a] Compile        : ijksdl <= yuv444p10le.fsh.c
+[arm64-v8a] Compile        : ijksdl <= mvp.vsh.c
+[arm64-v8a] Compile        : ijksdl <= amc.vsh.c
+[arm64-v8a] Compile++      : ijksdl <= amc.fsh.cpp
+[arm64-v8a] Compile        : ijksdl <= ijksdl_vout_dummy.c
+cc1plus: warning: command line option '-std=c11' is valid for C/ObjC but not for C++
+[arm64-v8a] Compile        : ijksdl <= ijksdl_vout_overlay_ffmpeg.c
+[arm64-v8a] Compile        : ijksdl <= image_convert.c
+[arm64-v8a] Compile        : ijksdl <= android_audiotrack.c
+[arm64-v8a] Compile        : ijksdl <= android_nativewindow.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_android_jni.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_aout_android_audiotrack.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_aout_android_opensles.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_codec_android_mediacodec_dummy.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_codec_android_mediacodec_internal.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_codec_android_mediacodec_java.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_codec_android_mediacodec.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_codec_android_mediadef.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_codec_android_mediaformat_java.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_codec_android_mediaformat.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_vout_android_nativewindow.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_vout_android_surface.c
+[arm64-v8a] Compile        : ijksdl <= ijksdl_vout_overlay_android_mediacodec.c
+[arm64-v8a] Compile        : cpufeatures <= cpu-features.c
+[arm64-v8a] Compile++      : yuv_static <= compare.cc
+[arm64-v8a] Compile++      : yuv_static <= compare_common.cc
+[arm64-v8a] Compile++      : yuv_static <= compare_posix.cc
+[arm64-v8a] Compile++      : yuv_static <= convert.cc
+[arm64-v8a] Compile++      : yuv_static <= convert_argb.cc
+[arm64-v8a] Compile++      : yuv_static <= convert_from.cc
+[arm64-v8a] Compile++      : yuv_static <= convert_from_argb.cc
+In file included from /home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkyuv/source/convert.cc:18:0:
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkyuv/source/convert.cc: In function 'int libyuv::RAWToI420(const uint8*, int, uint8*, int, uint8*, int, uint8*, int, int, int)':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkyuv/source/convert.cc:1086:21: warning: unused variable 'row' [-Wunused-variable]
+     align_buffer_64(row, kRowSize * 2);
+                     ^
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijkyuv/include/libyuv/row.h:28:10: note: in definition of macro 'align_buffer_64'
+   uint8* var = reinterpret_cast<uint8*>                                        \
+          ^
+<built-in>: In function 'float abs(float)':
+<built-in>: warning: conflicts with previous declaration here [-Wattributes]
+[arm64-v8a] Compile++      : yuv_static <= convert_to_argb.cc
+[arm64-v8a] Compile++      : yuv_static <= convert_to_i420.cc
+[arm64-v8a] Compile++      : yuv_static <= cpu_id.cc
+[arm64-v8a] Compile++      : yuv_static <= planar_functions.cc
+[arm64-v8a] Compile++      : yuv_static <= format_conversion.cc
+[arm64-v8a] Compile++      : yuv_static <= rotate.cc
+[arm64-v8a] Compile++      : yuv_static <= rotate_argb.cc
+[arm64-v8a] Compile++      : yuv_static <= rotate_mips.cc
+[arm64-v8a] Compile++      : yuv_static <= row_any.cc
+[arm64-v8a] Compile++      : yuv_static <= row_common.cc
+[arm64-v8a] Compile++      : yuv_static <= row_mips.cc
+[arm64-v8a] Compile++      : yuv_static <= row_posix.cc
+[arm64-v8a] Compile++      : yuv_static <= scale.cc
+[arm64-v8a] Compile++      : yuv_static <= scale_argb.cc
+[arm64-v8a] Compile++      : yuv_static <= scale_common.cc
+[arm64-v8a] Compile++      : yuv_static <= scale_mips.cc
+[arm64-v8a] Compile++      : yuv_static <= scale_posix.cc
+[arm64-v8a] Compile++      : yuv_static <= video_common.cc
+[arm64-v8a] Compile++      : yuv_static <= compare_neon64.cc
+[arm64-v8a] Compile++      : yuv_static <= rotate_neon64.cc
+[arm64-v8a] Compile++      : yuv_static <= row_neon64.cc
+[arm64-v8a] Compile++      : yuv_static <= scale_neon64.cc
+[arm64-v8a] Compile        : ijkj4a <= j4a_allclasses.c
+[arm64-v8a] Compile        : ijkj4a <= j4a_base.c
+[arm64-v8a] Compile        : ijkj4a <= MediaCodecSurface.c
+[arm64-v8a] Compile        : ijkj4a <= AudioTrack.c
+[arm64-v8a] Compile        : ijkj4a <= MediaCodec.c
+[arm64-v8a] Compile        : ijkj4a <= PlaybackParams.c
+[arm64-v8a] Compile        : ijkj4a <= MediaFormat.c
+[arm64-v8a] Compile        : ijkj4a <= Build.c
+[arm64-v8a] Compile        : ijkj4a <= Bundle.c
+[arm64-v8a] Compile        : ijkj4a <= Buffer.c
+[arm64-v8a] Compile        : ijkj4a <= ByteBuffer.c
+[arm64-v8a] Compile        : ijkj4a <= ArrayList.c
+[arm64-v8a] Compile        : ijkj4a <= IMediaDataSource.c
+[arm64-v8a] Compile        : ijkj4a <= IAndroidIO.c
+[arm64-v8a] Compile        : ijkj4a <= AudioTrack.util.c
+[arm64-v8a] Compile        : ijkj4a <= ByteBuffer.util.c
+[arm64-v8a] Compile        : android-ndk-profiler <= prof.c
+[arm64-v8a] Compile++      : ijksoundtouch <= AAFilter.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= FIFOSampleBuffer.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= FIRFilter.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= cpu_detect_x86.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= sse_optimized.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= RateTransposer.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= InterpolateCubic.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= InterpolateLinear.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= InterpolateShannon.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= TDStretch.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= BPMDetect.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= PeakFinder.cpp
+[arm64-v8a] Compile++      : ijksoundtouch <= SoundTouch.cpp
+<built-in>: In function 'float abs(float)':
+<built-in>: warning: conflicts with previous declaration here [-Wattributes]
+[arm64-v8a] Compile++      : ijksoundtouch <= mmx_optimized.cpp
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijksoundtouch/source/SoundTouch/FIRFilter.cpp: In static member function 'static soundtouch::FIRFilter* soundtouch::FIRFilter::newInstance()':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijksoundtouch/source/SoundTouch/FIRFilter.cpp:307:10: warning: variable 'uExtensions' set but not used [-Wunused-but-set-variable]
+     uint uExtensions;
+          ^
+<built-in>: In function 'float abs(float)':
+<built-in>: warning: conflicts with previous declaration here [-Wattributes]
+[arm64-v8a] Compile++      : ijksoundtouch <= ijksoundtouch_wrap.cpp
+<built-in>: In function 'float abs(float)':
+<built-in>: warning: conflicts with previous declaration here [-Wattributes]
+<built-in>: In function 'float abs(float)':
+<built-in>: warning: conflicts with previous declaration here [-Wattributes]
+<built-in>: In function 'float abs(float)':
+<built-in>: warning: conflicts with previous declaration here [-Wattributes]
+<built-in>: In function 'float abs(float)':
+<built-in>: warning: conflicts with previous declaration here [-Wattributes]
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijksoundtouch/source/SoundTouch/TDStretch.cpp: In static member function 'static soundtouch::TDStretch* soundtouch::TDStretch::newInstance()':
+/home/denghg/workspace/befovy/ijkplayer/android/ijkplayer/ijkplayer-arm64/src/main/jni/ijkmedia/ijksoundtouch/source/SoundTouch/TDStretch.cpp:745:10: warning: variable 'uExtensions' set but not used [-Wunused-but-set-variable]
+     uint uExtensions;
+          ^
+<built-in>: In function 'float abs(float)':
+<built-in>: warning: conflicts with previous declaration here [-Wattributes]
+[arm64-v8a] Install        : libc++_shared.so => libs/arm64-v8a/libc++_shared.so
+[arm64-v8a] Install        : libijkffmpeg.so => libs/arm64-v8a/libijkffmpeg.so
+[arm64-v8a] StaticLibrary  : libcpufeatures.a
+[arm64-v8a] StaticLibrary  : libandroid-ndk-profiler.a
+[arm64-v8a] StaticLibrary  : libijkj4a.a
+[arm64-v8a] StaticLibrary  : libijksoundtouch.a
+[arm64-v8a] StaticLibrary  : libyuv_static.a
+[arm64-v8a] SharedLibrary  : libijksdl.so
+[arm64-v8a] SharedLibrary  : libijkplayer.so
+[arm64-v8a] Install        : libijksdl.so => libs/arm64-v8a/libijksdl.so
+[arm64-v8a] Install        : libijkplayer.so => libs/arm64-v8a/libijkplayer.so
+/home/denghg/workspace/befovy/ijkplayer/android

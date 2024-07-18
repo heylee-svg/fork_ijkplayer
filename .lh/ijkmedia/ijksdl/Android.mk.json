@@ -1,0 +1,30 @@
+{
+    "sourceFile": "ijkmedia/ijksdl/Android.mk",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1685613812581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685614181229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n LOCAL_C_INCLUDES += $(realpath $(LOCAL_PATH)/../ijkj4a)\n \n LOCAL_SRC_FILES += ijksdl_log.c\n LOCAL_SRC_FILES += ijksdl_extra_log.c\n-LOCAL_SRC_FILES += renderer_amc.c\n+LOCAL_SRC_FILES += gles2/renderer_amc.c\n LOCAL_SRC_FILES += ijksdl_aout.c\n LOCAL_SRC_FILES += ijksdl_audio.c\n LOCAL_SRC_FILES += ijksdl_egl.c\n LOCAL_SRC_FILES += ijksdl_error.c\n"
+                },
+                {
+                    "date": 1685615277050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,9 @@\n LOCAL_SRC_FILES += gles2/fsh/rgb.fsh.c\n LOCAL_SRC_FILES += gles2/fsh/yuv420p.fsh.c\n LOCAL_SRC_FILES += gles2/fsh/yuv444p10le.fsh.c\n LOCAL_SRC_FILES += gles2/vsh/mvp.vsh.c\n+LOCAL_SRC_FILES += gles2/vsh/amc.vsh.c\n \n LOCAL_SRC_FILES += dummy/ijksdl_vout_dummy.c\n \n LOCAL_SRC_FILES += ffmpeg/ijksdl_vout_overlay_ffmpeg.c\n"
+                },
+                {
+                    "date": 1685615353258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n LOCAL_SRC_FILES += gles2/fsh/yuv420p.fsh.c\n LOCAL_SRC_FILES += gles2/fsh/yuv444p10le.fsh.c\n LOCAL_SRC_FILES += gles2/vsh/mvp.vsh.c\n LOCAL_SRC_FILES += gles2/vsh/amc.vsh.c\n-\n+LOCAL_SRC_FILES += gles2/fsh/amc.fsh.cpp\n LOCAL_SRC_FILES += dummy/ijksdl_vout_dummy.c\n \n LOCAL_SRC_FILES += ffmpeg/ijksdl_vout_overlay_ffmpeg.c\n LOCAL_SRC_FILES += ffmpeg/abi_all/image_convert.c\n"
+                }
+            ],
+            "date": 1685613812581,
+            "name": "Commit-0",
+            "content": "# Copyright (c) 2013 Bilibili\n# copyright (c) 2013 Zhang Rui <bbcallen@gmail.com>\n#\n# This file is part of ijkPlayer.\n#\n# ijkPlayer is free software; you can redistribute it and/or\n# modify it under the terms of the GNU Lesser General Public\n# License as published by the Free Software Foundation; either\n# version 2.1 of the License, or (at your option) any later version.\n#\n# ijkPlayer is distributed in the hope that it will be useful,\n# but WITHOUT ANY WARRANTY; without even the implied warranty of\n# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n# Lesser General Public License for more details.\n#\n# You should have received a copy of the GNU Lesser General Public\n# License along with ijkPlayer; if not, write to the Free Software\n# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA\n\nLOCAL_PATH := $(call my-dir)\n\ninclude $(CLEAR_VARS)\nLOCAL_CFLAGS += -std=c11\nLOCAL_LDLIBS += -llog -landroid -lOpenSLES -lEGL -lGLESv2 -L /home/denghg/Android/android-ndk-r21e/platforms/android-21/arch-arm64/usr/lib\n\nLOCAL_C_INCLUDES += $(LOCAL_PATH)\nLOCAL_C_INCLUDES += $(realpath $(LOCAL_PATH)/..)\nLOCAL_C_INCLUDES += $(MY_APP_FFMPEG_INCLUDE_PATH)\nLOCAL_C_INCLUDES += $(realpath $(LOCAL_PATH)/../ijkyuv/include)\nLOCAL_C_INCLUDES += $(realpath $(LOCAL_PATH)/../ijkj4a)\n\nLOCAL_SRC_FILES += ijksdl_log.c\nLOCAL_SRC_FILES += ijksdl_extra_log.c\nLOCAL_SRC_FILES += renderer_amc.c\nLOCAL_SRC_FILES += ijksdl_aout.c\nLOCAL_SRC_FILES += ijksdl_audio.c\nLOCAL_SRC_FILES += ijksdl_egl.c\nLOCAL_SRC_FILES += ijksdl_error.c\nLOCAL_SRC_FILES += ijksdl_mutex.c\nLOCAL_SRC_FILES += ijksdl_stdinc.c\nLOCAL_SRC_FILES += ijksdl_thread.c\nLOCAL_SRC_FILES += ijksdl_timer.c\nLOCAL_SRC_FILES += ijksdl_vout.c\nLOCAL_SRC_FILES += ijksdl_extra_log.c\nLOCAL_SRC_FILES += gles2/color.c\nLOCAL_SRC_FILES += gles2/common.c\nLOCAL_SRC_FILES += gles2/renderer.c\nLOCAL_SRC_FILES += gles2/renderer_rgb.c\nLOCAL_SRC_FILES += gles2/renderer_yuv420p.c\nLOCAL_SRC_FILES += gles2/renderer_yuv444p10le.c\nLOCAL_SRC_FILES += gles2/shader.c\nLOCAL_SRC_FILES += gles2/fsh/rgb.fsh.c\nLOCAL_SRC_FILES += gles2/fsh/yuv420p.fsh.c\nLOCAL_SRC_FILES += gles2/fsh/yuv444p10le.fsh.c\nLOCAL_SRC_FILES += gles2/vsh/mvp.vsh.c\n\nLOCAL_SRC_FILES += dummy/ijksdl_vout_dummy.c\n\nLOCAL_SRC_FILES += ffmpeg/ijksdl_vout_overlay_ffmpeg.c\nLOCAL_SRC_FILES += ffmpeg/abi_all/image_convert.c\n\nLOCAL_SRC_FILES += android/android_audiotrack.c\nLOCAL_SRC_FILES += android/android_nativewindow.c\nLOCAL_SRC_FILES += android/ijksdl_android_jni.c\nLOCAL_SRC_FILES += android/ijksdl_aout_android_audiotrack.c\nLOCAL_SRC_FILES += android/ijksdl_aout_android_opensles.c\nLOCAL_SRC_FILES += android/ijksdl_codec_android_mediacodec_dummy.c\nLOCAL_SRC_FILES += android/ijksdl_codec_android_mediacodec_internal.c\nLOCAL_SRC_FILES += android/ijksdl_codec_android_mediacodec_java.c\nLOCAL_SRC_FILES += android/ijksdl_codec_android_mediacodec.c\nLOCAL_SRC_FILES += android/ijksdl_codec_android_mediadef.c\nLOCAL_SRC_FILES += android/ijksdl_codec_android_mediaformat_java.c\nLOCAL_SRC_FILES += android/ijksdl_codec_android_mediaformat.c\nLOCAL_SRC_FILES += android/ijksdl_vout_android_nativewindow.c\nLOCAL_SRC_FILES += android/ijksdl_vout_android_surface.c\nLOCAL_SRC_FILES += android/ijksdl_vout_overlay_android_mediacodec.c\n\nLOCAL_SHARED_LIBRARIES := ijkffmpeg\nLOCAL_STATIC_LIBRARIES := cpufeatures yuv_static ijkj4a\n\nLOCAL_MODULE := ijksdl\ninclude $(BUILD_SHARED_LIBRARY)\n\n$(call import-module,android/cpufeatures)\n"
+        }
+    ]
+}

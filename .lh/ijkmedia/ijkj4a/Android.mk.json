@@ -1,0 +1,22 @@
+{
+    "sourceFile": "ijkmedia/ijkj4a/Android.mk",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1685614892473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685615277048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,9 @@\n LOCAL_SRC_FILES += j4a/class/tv/danmaku/ijk/media/player/misc/IMediaDataSource.c\n LOCAL_SRC_FILES += j4a/class/tv/danmaku/ijk/media/player/misc/IAndroidIO.c\n LOCAL_SRC_FILES += j4a/class/tv/danmaku/ijk/media/player/IjkMediaPlayer.c\n \n+\n LOCAL_SRC_FILES += j4au/class/android/media/AudioTrack.util.c\n LOCAL_SRC_FILES += j4au/class/java/nio/ByteBuffer.util.c\n \n LOCAL_MODULE := ijkj4a\n"
+                }
+            ],
+            "date": 1685614892473,
+            "name": "Commit-0",
+            "content": "# copyright (c) 2016 Zhang Rui <bbcallen@gmail.com>\n#\n# This file is part of ijkPlayer.\n#\n# ijkPlayer is free software; you can redistribute it and/or\n# modify it under the terms of the GNU Lesser General Public\n# License as published by the Free Software Foundation; either\n# version 2.1 of the License, or (at your option) any later version.\n#\n# ijkPlayer is distributed in the hope that it will be useful,\n# but WITHOUT ANY WARRANTY; without even the implied warranty of\n# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n# Lesser General Public License for more details.\n#\n# You should have received a copy of the GNU Lesser General Public\n# License along with ijkPlayer; if not, write to the Free Software\n# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA\n\nLOCAL_PATH := $(call my-dir)\n\ninclude $(CLEAR_VARS)\nLOCAL_CFLAGS += -std=c11\n\nLOCAL_C_INCLUDES += $(LOCAL_PATH)\nLOCAL_C_INCLUDES += $(realpath $(LOCAL_PATH))\n\n\nLOCAL_SRC_FILES += j4a/j4a_allclasses.c\nLOCAL_SRC_FILES += j4a/j4a_base.c\nLOCAL_SRC_FILES += j4a/class/tv/danmaku/ijk/media/player/misc/MediaCodecSurface.c\nLOCAL_SRC_FILES += j4a/class/android/media/AudioTrack.c\nLOCAL_SRC_FILES += j4a/class/android/media/MediaCodec.c\nLOCAL_SRC_FILES += j4a/class/android/media/MediaFormat.c\nLOCAL_SRC_FILES += j4a/class/android/media/PlaybackParams.c\nLOCAL_SRC_FILES += j4a/class/android/os/Build.c\nLOCAL_SRC_FILES += j4a/class/android/os/Bundle.c\nLOCAL_SRC_FILES += j4a/class/java/nio/Buffer.c\nLOCAL_SRC_FILES += j4a/class/java/nio/ByteBuffer.c\nLOCAL_SRC_FILES += j4a/class/java/util/ArrayList.c\nLOCAL_SRC_FILES += j4a/class/tv/danmaku/ijk/media/player/misc/IMediaDataSource.c\nLOCAL_SRC_FILES += j4a/class/tv/danmaku/ijk/media/player/misc/IAndroidIO.c\nLOCAL_SRC_FILES += j4a/class/tv/danmaku/ijk/media/player/IjkMediaPlayer.c\n\nLOCAL_SRC_FILES += j4au/class/android/media/AudioTrack.util.c\nLOCAL_SRC_FILES += j4au/class/java/nio/ByteBuffer.util.c\n\nLOCAL_MODULE := ijkj4a\ninclude $(BUILD_STATIC_LIBRARY)\n\n$(call import-module,android/cpufeatures)\n"
+        }
+    ]
+}

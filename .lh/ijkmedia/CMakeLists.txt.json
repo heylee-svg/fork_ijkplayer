@@ -1,0 +1,18 @@
+{
+    "sourceFile": "ijkmedia/CMakeLists.txt",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1686110365861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1686110365861,
+            "name": "Commit-0",
+            "content": "#\n# Copyright (c) 2019 Befovy <befovy@gmail.com>\n#\n# This file is part of fijkPlayer.\n#\n# fijkPlayer is free software; you can redistribute it and/or\n# modify it under the terms of the GNU Lesser General Public\n# License as published by the Free Software Foundation; either\n# version 2.1 of the License, or (at your option) any later version.\n#\n# fijkPlayer is distributed in the hope that it will be useful,\n# but WITHOUT ANY WARRANTY; without even the implied warranty of\n# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n# Lesser General Public License for more details.\n#\n# You should have received a copy of the GNU Lesser General Public\n# License along with ijkPlayer; if not, write to the Free Software\n# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA\n#\n\ncmake_minimum_required(VERSION 3.5)\n\nif (NOT DEFINED FIJKROOT_PATH)\n    set(FIJKROOT_PATH ${CMAKE_CURRENT_LIST_DIR}/../)\nendif ()\nset(CMAKE_BUILD_TYPE \"Debug\")\nif (IJK_DESKTOP_UNI)\n    add_subdirectory(portaudio)\n    add_subdirectory(ijkyuv)\n\n    target_compile_options(portaudio_static PRIVATE \"-Wno-deprecated-declarations\")\n    target_compile_options(portaudio PRIVATE \"-Wno-deprecated-declarations\")\nendif ()\n\nadd_subdirectory(ijksdl)\nadd_subdirectory(ijkplayer)\n\nset(GIT_DESCRIBE \"unknown, dose not found git\")\nexecute_process(\n        COMMAND git describe --dirty\n        OUTPUT_VARIABLE GIT_DESCRIBE\n        OUTPUT_STRIP_TRAILING_WHITESPACE\n        # ERROR_QUIET\n        WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}\n)\nconfigure_file(ijkplayer/ijkversion.h.in ${CMAKE_CURRENT_LIST_DIR}/ijkplayer/ijkversion.h @ONLY)\n\nif (ANDROID)\n    add_subdirectory(ijksoundtouch)\n    add_subdirectory(ijkyuv)\n    add_subdirectory(ijkj4a)\n    # just a dummy android ndk prifiler\n    option(ANDROID_NDK_PROFILER OFF)\n    if (NDK_PROFILER)\n        # not implemented yet\n        message(FATAL_ERROR \"not implemented yet, android-ndk-profiler\")\n        add_subdirectory(../ijkprof/android-ndk-profiler/jni ijkprof)\n    else ()\n        add_subdirectory(../ijkprof/android-ndk-profiler-dummy/jni ijkprof)\n    endif (NDK_PROFILER)\n\n    # add_dependencies(ijkplayer android-ndk-profiler)\nendif ()\n"
+        }
+    ]
+}
